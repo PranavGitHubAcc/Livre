@@ -1,12 +1,14 @@
 import express from "express";
 const app = express();
 import dotenv from "dotenv";
+import productRoutes from "./routes/products.js";
+import { connectDatabase } from "./config/dbConnect.js";
 
 dotenv.config({ path: "backend/config/config.env" });
 
-import productRoutes from "./routes/products.js";
+connectDatabase();
 
-app.use("/api/v1", productRoutes);
+app.use("/", productRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(
