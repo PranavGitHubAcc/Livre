@@ -1,15 +1,19 @@
-// src/components/LanguageTranslator.js
 import React, { useState } from 'react';
-import { translate } from '@vitalets/google-translate-api';
+import axios from 'axios';
+import '../style/LanguageTranslator.css'
 
 function LanguageTranslator() {
   const [text, setText] = useState('');
   const [translated, setTranslated] = useState('');
+  const [targetLang, setTargetLang] = useState('en');
 
   const translateText = async () => {
     try {
-      const { text: translatedText } = await translate(text, { to: 'en' });
-      setTranslated(translatedText);
+      const response = await axios.post('http://localhost:4000/translate', {
+        text,
+        targetLang
+      });
+      setTranslated(response.data.translatedText);
     } catch (error) {
       console.error('Error:', error);
       setTranslated('Translation failed');
@@ -18,13 +22,27 @@ function LanguageTranslator() {
 
   return (
     <div>
-      <h2>Language Translator</h2>
-      <textarea
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Enter text to translate"
-      />
-      <button onClick={translateText}>Translate</button>
+
+      <h2><strong>Language Translator</strong></h2>
+
+
+
+      <div className='inp'>
+          <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Enter text to translate"
+          />
+
+          
+        <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="mr">Marathi</option>
+        </select>
+ 
+          <button onClick={translateText}>Translate</button>
+      </div>
       <p>Translated Text: {translated}</p>
     </div>
   );
