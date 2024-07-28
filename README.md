@@ -29,11 +29,14 @@ Welcome to Livre, the Travel Companion App! This application is designed to make
 ```bash
 git clone https://github.com/yourusername/livre.git
 
+
+### For running the Frontend
 cd livre
 cd backend
 npm install
 npm run dev
 
+### For running the Frontend
 cd livre
 cd frontend
 npm install
