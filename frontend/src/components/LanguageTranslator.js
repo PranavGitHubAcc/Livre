@@ -24,7 +24,7 @@ function LanguageTranslator() {
     <div>
 
       <h2><strong>Language Translator</strong></h2>
-
+      <div className='boxed'>
 
 
       <div className='inp'>
@@ -43,7 +43,9 @@ function LanguageTranslator() {
  
           <button onClick={translateText}>Translate</button>
       </div>
-      <p>Translated Text: {translated}</p>
+      <p>Translated Text</p>
+      <div className='translated'>{translated}</div>
+    </div>
     </div>
   );
 }

@@ -70,7 +70,7 @@ function CurrencyConverter() {
         />
         <button onClick={convertCurrency}>Convert to {destCurrency}</button>
       </div>
-      <p>Converted Amount: {destCurrency} {converted.toFixed(2)}</p>
+      <div className='beforetext'>Converted Amount: <div className='amount'>{destCurrency} {converted.toFixed(2)}</div></div>
     </div>
   );
 }

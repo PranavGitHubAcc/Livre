@@ -12,6 +12,16 @@ h2 {
     gap: 10px;
 }
 
+.boxed {
+
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    width: 400px; 
+  }
+
 select {
 
     padding: 10px;
@@ -31,5 +41,20 @@ select {
 }
 
 .inp button:active, .inp button:hover{
-    background-color: #a39595;
+    background-color: #007bff;
+    color: white;
 }
+
+.translated {
+    margin: 0 40%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
