@@ -1,13 +1,16 @@
 import express from "express";
-const app = express();
 import dotenv from "dotenv";
 import productRoutes from "./routes/products.js";
 import { connectDatabase } from "./config/dbConnect.js";
+import bodyParser from "body-parser";
+const app = express();
 
 dotenv.config({ path: "backend/config/config.env" });
 
 connectDatabase();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", productRoutes);
 
 app.listen(process.env.PORT, () => {
