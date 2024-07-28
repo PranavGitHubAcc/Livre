@@ -56,7 +56,7 @@ export const deleteJournal = async (req, res) => {
     await journal.deleteOne();
 
     res.status(200).json({
-        message: "Product deleted",
+        message: "Journal deleted",
     });
 };
 
