@@ -1,0 +1,35 @@
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.inp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #704f4f;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.inp button{
+    margin-bottom: 30px;
+    background-color: #a39595;
+    color: antiquewhite;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.inp button:active, .inp button:hover{
+    background-color: #a39595;
+}

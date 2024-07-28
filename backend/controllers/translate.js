@@ -3,9 +3,7 @@ import { translate } from "@vitalets/google-translate-api";
 export const translateText = async (req, res) => {
     const { text, targetLang } = req.body;
     try {
-        const { text: translatedText } = await translate(text, {
-            to: targetLang,
-        });
+        const { text: translatedText } = await translate(text, { to: targetLang });
         res.status(200).json({
             message: "Translated text",
             translatedText,

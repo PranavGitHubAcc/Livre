@@ -3,7 +3,13 @@ import dotenv from "dotenv";
 import productRoutes from "./routes/products.js";
 import { connectDatabase } from "./config/dbConnect.js";
 import bodyParser from "body-parser";
+import cors from 'cors';
+
+
+
 const app = express();
+
+app.use(cors());
 
 dotenv.config({ path: "backend/config/config.env" });
 

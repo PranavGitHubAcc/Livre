@@ -1,6 +1,6 @@
-// src/components/CurrencyConverter.js
 import React, { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
+import '../style/CurrencyConverter.css';
 
 function CurrencyConverter() {
   const [amount, setAmount] = useState('');
@@ -68,7 +68,7 @@ function CurrencyConverter() {
           onChange={(e) => setAmount(e.target.value)}
           placeholder={`Enter amount in ${srcCurrency}`}
         />
-        <button onClick={convertCurrency}>Convert</button>
+        <button onClick={convertCurrency}>Convert to {destCurrency}</button>
       </div>
       <p>Converted Amount: {destCurrency} {converted.toFixed(2)}</p>
     </div>
