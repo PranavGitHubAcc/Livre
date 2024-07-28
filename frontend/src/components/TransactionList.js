@@ -15,3 +15,5 @@ export const TransactionList = () => {
     </>
   )
 }
+
+export default TransactionList;

@@ -17,6 +17,9 @@ function Sidebar() {
           <li>
             <NavLink to="/journal" className={({ isActive }) => (isActive ? 'active' : '')}>Journal</NavLink>
           </li>
+          <li>
+            <NavLink to="/money-tracker" className={({ isActive }) => (isActive ? 'active' : '')}>Money Tracker</NavLink>
+          </li>
 
         </ul>
       </nav>

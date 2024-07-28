@@ -39,3 +39,6 @@ export const AddTransaction = () => {
     </>
   )
 }
+
+export default AddTransaction;
+

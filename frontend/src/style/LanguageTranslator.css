@@ -24,8 +24,8 @@ select {
 
 .inp button{
     margin-bottom: 30px;
-    background-color: #a39595;
-    color: antiquewhite;
+    background-color: white;
+    color: black;
     padding: 5px 10px;
     border-radius: 10px;
 }
