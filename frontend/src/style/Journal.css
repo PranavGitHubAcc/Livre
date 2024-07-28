@@ -1,0 +1,101 @@
+
+.journal {
+    padding: 20px;
+    
+  }
+  
+  .journal .title {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 50px;
+  }
+
+
+  
+  .journal button {
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    background-color: #525252;
+    color: #f5f5f5;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    
+
+  }
+  
+  form div {
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  
+  form label {
+    margin-bottom: 5px;
+    
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    
+  }
+  
+  .entries {
+    margin-top: 20px;
+
+  }
+  
+  .entry {
+    border: 0.1px solid black;
+    padding: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+    height: 100%;
+    background-color: #d4d4d8;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-right: 100px;
+    
+    text-align: left;
+  }
+  
+  .entry h3 {
+    margin-top: 0;
+    font-weight: 800;
+  }
+  
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    
+  }
+  
+  .images img {
+    
+    max-height: 300px;
+    max-width: 400px;
+    height: 100%;
+    border: 2px solid black; 
+    border-radius: 4px;
+    object-fit: cover; 
+  }

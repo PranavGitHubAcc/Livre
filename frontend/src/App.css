@@ -1,38 +1,81 @@
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  position: sticky;
+  top: 0;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header, footer {
+  background-color: #171717;
+  color: white;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+    font-size: 15px;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 30px;
+}
+
+
+main {
+  margin-left: 220px; 
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.CurrencyConverter {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+
+}
+
+
+.sidebar {
+  width: 200px;
+  position: fixed;
+  top: 20;
+  left: 0;
+  height: 100%;
+  background-color:#a3a3a3;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #325ce7;
+  color: white;
+}
+.sidebar nav ul li a.active {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
